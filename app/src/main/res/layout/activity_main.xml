@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.meta5.xo.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp">
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"/>
+
+    <RelativeLayout
+        android:id="@+id/llRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:elevation="1dp"
+            android:onClick="change"
+            android:alpha="0"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:elevation="1dp"
+            android:onClick="change"
+            android:alpha="0"
+            android:layout_toLeftOf="@id/iv2"/>
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:elevation="1dp"
+            android:onClick="change"
+            android:alpha="0"
+            android:layout_toRightOf="@id/iv2"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/llRow1"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:elevation="1dp"
+                android:onClick="change"
+                android:alpha="0"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:elevation="1dp"
+                android:onClick="change"
+                android:alpha="0"
+                android:layout_toLeftOf="@id/iv5"/>
+
+            <ImageView
+                android:id="@+id/iv6"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:elevation="1dp"
+                android:onClick="change"
+                android:alpha="0"
+                android:layout_toRightOf="@id/iv5"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/llRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/llRow2"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:id="@+id/iv8"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:elevation="1dp"
+                android:onClick="change"
+                android:alpha="0"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv7"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:elevation="1dp"
+                android:onClick="change"
+                android:alpha="0"
+                android:layout_toLeftOf="@id/iv8"/>
+
+            <ImageView
+                android:id="@+id/iv9"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:elevation="1dp"
+                android:onClick="change"
+                android:alpha="0"
+                android:layout_toRightOf="@id/iv8"/>
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/rlBoard"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    <TextView
+        android:id="@+id/tvCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/ivX"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/x"
+        android:layout_toLeftOf="@id/tvCenter"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player 1"
+            android:textSize="15dp"
+            android:layout_toLeftOf="@+id/ivX"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:inputType="none"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/tvWins1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wins: 0"
+            android:layout_below="@id/et1"
+            android:layout_toLeftOf="@id/ivX"
+            android:layout_marginRight="15dp"/>
+
+
+        <ImageView
+            android:id="@+id/ivO"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/o"
+            android:layout_toRightOf="@id/tvCenter"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player 2"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/ivO"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:inputType="none"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/tvWins2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wins: 0"
+            android:layout_below="@id/et2"
+            android:layout_toRightOf="@id/ivO"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:id="@+id/ivTurn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/turn"
+            android:layout_toLeftOf="@id/tvCenter"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"/>
+</RelativeLayout>
+</RelativeLayout>
